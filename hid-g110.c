@@ -363,11 +363,11 @@ static const struct led_classdev g110_led_cdevs[6] = {
 	},
 };
 
-static DEVICE_ATTR(keymap_index, 0666,
+static DEVICE_ATTR(keymap_index, 0660,
                    ginput_keymap_index_show,
                    ginput_keymap_index_store);
 
-static DEVICE_ATTR(keymap, 0666,
+static DEVICE_ATTR(keymap, 0660,
                    ginput_keymap_show,
                    ginput_keymap_store);
 
@@ -439,7 +439,7 @@ static ssize_t g110_name_store(struct device *dev,
 	return count;
 }
 
-static DEVICE_ATTR(name, 0666, g110_name_show, g110_name_store);
+static DEVICE_ATTR(name, 0660, g110_name_show, g110_name_store);
 
 static void g110_feature_report_4_send(struct hid_device *hdev, int which)
 {
